@@ -1,0 +1,616 @@
+/**
+Theme Name: TDT One
+Version: 1.2.0
+Author: Thapelo Moeti
+Author URI: https://www.thapedict.co.za/
+Theme URI: 
+Text Domain: tdt-one
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, custom-header, custom-menu, custom-colors, editor-style, featured-images, microformats, threaded-comments, footer-widgets, post-formats, sticky-post, theme-options
+Description: A simple, yet very useful theme with a default hint of red that can be used on almost any website
+
+TDT One Theme,  Copyright 2018 Thapelo Moeti
+is distributed under the terms of the GNU GPL
+
+*/
+
+body {
+    font-family: "courier new";
+    font-size: 16pt;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+#site-header-wrapper #menu-wrap {
+    border: 3px solid;
+    border-width: 3px 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+#site-header-wrapper #menu-wrap > * {
+    padding: 0;
+}
+
+header #social-links a {
+    margin: 5px;
+    display: inline-block;
+}
+
+body > header {
+    padding-top: 3em;
+}
+
+#site-header {
+    margin-bottom: 2em;
+}
+
+#site-header .custom-logo {
+    height: 115px;
+    width: auto;
+} 
+
+#site-header #site-name {
+    font-size: 2.6em;
+}
+
+#site-header #site-description {
+    text-transform: capitalize;
+    margin-top: 2em;
+}
+
+#site-header #site-name a {
+    border: 3px solid;
+    padding: 0.3em 0.7em;
+    margin-bottom: 1px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+figcaption {
+    font-size: 85%;
+}
+
+.wp-caption,
+.gallery-caption {
+    border: 1px solid;
+    padding: 5px 4px;
+    border-radius: 3px;
+    margin: 1em 0;
+}
+
+.wp-caption.alignnone,
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+    max-width: 100% !important;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.aligncenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption-text {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 0.75em;
+}
+
+.wp-caption-text.gallery-caption {
+    margin-top: 0.5em;
+}
+
+.doing-the-loop article {
+    border-top: 1px solid #999;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.doing-the-loop .post-excerpt:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.doing-the-loop .post-excerpt .post-comments {
+    font-size: 0.8em;
+}
+
+.doing-the-loop .post-excerpt.sticky {
+    margin-bottom: -1em;
+    padding: 1em;
+    padding-top: 1em;
+}
+
+.full-post .post-thumbnail {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+article .post-meta {
+    font-size: 80%;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+article .post-categories {
+    display: block;
+    margin-top: 0.5em;
+}
+
+article .post-excerpt a.excerpt-more {
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.post-content .wp-block-button__link {
+  border-radius: 2px;
+}
+
+.post-content a:not(.wp-block-button__link) {
+    border-bottom: 1px solid;
+    padding-bottom: 0.1em;
+}
+
+.format-link .post-content,
+.format-status .post-content {
+    text-align: center;
+    padding: 2em;
+}
+
+.post-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.post-content > .post-tags .label {
+  font: 95% bold;
+}
+
+.post-content > .post-tags .tag {
+  padding-left: 0.3em;
+}
+
+.prev-next-post-links {
+    border-top: 1px solid #000;
+    padding-top: 0.5em;
+    margin-top: 2em;
+}
+
+.full-post .post-pages a {
+    font-weight: bold;
+    border: 1px solid;
+    padding: 0.2em 0.5em;
+    display: inline-block;
+}
+
+.full-post .post-pages {
+    margin-top: 0.5em;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+.full-post .post-pages p {
+    margin-bottom: 0;
+}
+
+section#main-title span {
+    text-decoration: underline;
+}
+
+.post-excerpt .post-title {
+    font-size: 1.5em;
+}
+
+.page-sidebar-widget {
+    border-bottom: 1px solid;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.button, button, input[type=reset], input[type=submit] {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+article#post-0 > div {
+    display: inline-block;
+    max-width: 600px;
+}
+
+form.post-password-form {
+    padding: 2em;
+    text-align: center;
+}
+
+form.post-password-form input {
+    max-width: 400px;
+}
+
+#comments {
+    margin-top: 2em;
+}
+
+div#comments > .header {
+    border-bottom: 3px solid;
+    padding-bottom: 0.1em;
+}
+
+#comments #no-comments {
+    padding: 2em;
+}
+
+#comments #respond {
+    margin-top: 2em;
+    padding: 1em;
+}
+
+#comments .comment {
+    padding-top: 0.5em;
+}
+
+.comment-author img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment.parent > .comment > * {
+    border-left: dotted 1px #ccc;
+    padding-left: 1em;
+}
+
+.comment-reply-link {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.comment.parent > .comment {
+    padding-left: 1.5em;
+}
+
+.comment-body > .reply {
+    text-align: right;
+    padding: 0.5em;
+    border-bottom: 1px dotted #ccc;
+}
+
+.comment-content > p:last-child {
+    margin-bottom: 0;
+}
+
+.comment-metadata {
+    font-size: 0.8em;
+    padding: 0.1em 2em 1em;
+}
+
+.old-comments > .pingback {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+}
+
+.comments-closed {
+    margin-top: 2em;
+}
+
+.post-content > .hw-widget {
+    padding: 2em 0;
+}
+
+body > footer {
+    border-top: 3px solid;
+    margin-top: 2em;
+}
+
+body > footer > #footer-sidebar {
+    margin: 2.5em 0;
+}
+
+footer div[class*=footer-sub-] {
+    border-top: 1px solid #999;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+footer > #footer-strip {
+    font-size: 80%;
+    padding: 1em;
+}
+
+form.search-form {
+    position: relative;
+    border: 1px solid;
+}
+
+form.search-form input {
+    padding: 11px 11px 10px;
+}
+
+form.search-form input.search-field {
+    border: none;
+    padding-right: 5em;
+}
+
+form.search-form .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+nav.posts-navigation {
+    margin-top: 2em;
+    border-top: 2px solid;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+nav.posts-navigation .nav-links > div {
+    float: left;
+    width: 50%;
+    padding: 0.5em;
+}
+
+nav.posts-navigation .nav-links > div.nav-next {
+    float: right;
+    text-align: right;
+}
+
+blockquote > p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.post.format-quote blockquote {
+    background-color: transparent;
+    border-width: 0;
+    padding: 2em;
+    font-size: 120%;
+    font-style:  italic;
+    text-align: center;
+}
+
+.post.format-quote blockquote:before,
+.post.format-quote blockquote:after {
+    font-size: 3em;
+}
+
+.post.format-quote blockquote:before {
+    content: open-quote;
+    float: left;
+    margin-top:  -0.6em;
+}
+
+.post.format-quote blockquote:after {
+    content: close-quote;
+    float: right;
+}
+
+.post.format-quote cite {
+    display: block;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.post.format-quote cite:before {
+    content: ' - ';
+}
+
+.post.format-status {
+    padding: 1em;
+}
+
+.format-gallery .gallery-preview {
+    margin: 1em;
+}
+
+.wp-block-pullquote {
+    padding: 2em 0;
+}
+
+.post-content .wp-block-pullquote blockquote {
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.wp-block-pullquote p {
+    font-size: 1.3em;
+    padding: 0;
+}
+
+.wp-block-pullquote.with-quotes p:before {
+    content: open-quote;
+    font-size: 2em;
+}
+
+.wp-block-pullquote.with-quotes p:after {
+    content: close-quote;
+    font-size: 2em;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+    margin: 1em 1em 1em 0;
+    padding: 1em;
+}
+
+.wp-block-columns > p {
+    padding: 1em;
+}
+
+.woocommerce-loop-category__title {
+    text-align: center;
+}
+
+.woocommerce-loop-category__title mark {
+    background-color: transparent;
+}
+
+.wc-block-grid__product-price ins {
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/**
+*****************************
+*   COLORS
+*****************************
+*/
+button, .button, .big-button, input[type=submit], input[type=reset],
+body > footer #footer-strip,
+section.call-to-action #cta-action .button:hover,
+.has-primary-background-color {
+    color: #fff;
+}
+
+#comments #respond {
+    background-color: #E6E6E6;
+}
+
+.old-comments > .pingback,
+.comments-closed,
+article .post-meta,
+.doing-the-loop .post-excerpt .post-comments,
+.post.format-quote cite,
+figcaption {
+    color: #8E8E8E;
+}
+
+.wp-block-cover .wp-block-cover__inner-container h1,
+.wp-block-cover .wp-block-cover__inner-container h2,
+.wp-block-cover .wp-block-cover__inner-container h3,
+.wp-block-cover .wp-block-cover__inner-container h4,
+.wp-block-cover .wp-block-cover__inner-container h5,
+.wp-block-cover .wp-block-cover__inner-container h6 {
+    color: #000;
+}
+
+
+/*
+ ****************************
+ *        Media Queries
+ ****************************
+ */
+@media screen and (max-width: 959.99px){
+
+    #page-sidebar {
+        margin-top: 3em;
+        padding-top: 1em;
+        border-top: 3px solid #aaa;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+    
+}
+
+@media screen and (min-width: 960px){
+
+    .wp-block-columns {
+        display: flex;
+        flex-flow: nowrap row;
+        margin: 2em 0;
+    }
+    
+    .wp-block-columns.has-2-columns > * {
+        width: 50%;
+        margin: 0 1em 0 0;
+    }
+    
+    body.front-page .alignfull,
+    body.page-template-full-width .alignfull {
+        width: calc(100% + 2em);
+        margin-left: -1em;
+    }
+
+    body.full-width > * > .container,    
+    body.full-width > * > * > .container {
+        display: block;
+        padding: 0 5em;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 767.99px){
+    .wp-block-columns {
+        display: block;
+    }
+
+    .wp-block-columns.has-2-columns > * {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    
+    #site-header-wrapper #menu-wrap > * {
+        padding: 0;
+    }
+
+    section#main-title span {
+        text-decoration: none;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.3em;
+        line-height: 2;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 959.99px){
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199.99px){
+
+}
+
+@media screen and (min-width: 1200px){
+    
+    body.front-page > * > .container,    
+    body.front-page > * > * > .container,
+    body.page-template-full-width > * > .container,    
+    body.page-template-full-width > * > * > .container {
+        display: block;
+        padding: 0 5em;
+        width: auto;
+    }
+
+    body.front-page .alignfull,
+    body.page-template-full-width .alignfull {
+        width: calc(100% + 10em);
+        margin-left: -5em;
+    }
+    
+}
+
+
+
+

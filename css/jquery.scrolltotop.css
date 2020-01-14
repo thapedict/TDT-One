@@ -1,0 +1,35 @@
+/**
+ * jQuery ScrollToTop CSS
+ * Version: 0.1.2
+ * Author: Thapelo Moeti
+ * License: GNU General Public License v2 or later
+ */
+
+#scroll-to-top {
+    background-color: #000;
+    z-index: 9999;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.6;
+    display: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.25em 0.5em;
+}
+
+#scroll-to-top i.fas {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+#scroll-to-top.shown {
+    animation-name: fadein;
+    animation-duration: 2s;
+    display: block;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 0.6; }
+}

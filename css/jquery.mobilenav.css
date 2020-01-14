@@ -1,0 +1,113 @@
+/**
+ * jQuery MobileNav CSS
+ * Version: 1.0.0
+ * Author: Thapelo Moeti
+ * License: GNU General Public License v2 or later
+ */
+
+.mobilenav-menu-toggle-button {
+    position: relative;
+    transition: left 1s;
+    display: none;
+}
+
+#mobilenav-menu,
+#mobilenav-menu li,
+#mobilenav-menu ul,
+#mobilenav-menu .sub-menu {
+    list-style: none;
+    display: block;
+    float: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+#mobilenav-menu {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    transition: left 1s;
+    width: 100%;
+    border-width: 2px 0;
+}
+
+#mobilenav-menu.does-slide {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    overflow: overlay;
+}
+
+#mobilenav-menu.from-left {
+    left: -300px;
+}
+
+#mobilenav-menu.from-left.collapsed {
+    left: 0;
+    transition: left 1s;
+    box-shadow: 2px 0px 5px #8a8a8a;
+}
+
+#mobilenav-menu.from-right {
+    left: auto;
+    right: -300px;
+    transition: right 1s;
+}
+
+#mobilenav-menu.from-right.collapsed {
+    right: 0;
+    transition: right 1s;
+    box-shadow: -2px 0px 5px #8a8a8a;
+}
+
+#mobilenav-menu li {
+    border-top: 1px solid #E0E0E0;
+    padding: 5px;
+}
+
+#mobilenav-menu li:first-child {
+    border-top: none;
+}
+
+#mobilenav-menu a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#mobilenav-menu .sub-menu {
+    border-top: 1px solid #E0E0E0;
+    display: none;
+}
+
+#mobilenav-menu .sub-menu > li {    
+    padding-left: 1em;
+}
+
+#mobilenav-menu #close-button-wrap {
+    padding: 1em;
+    text-align: right;
+}
+
+#mobilenav-menu #close-button {
+    font-size: 1.1em;
+}
+
+#mobilenav-menu.does-slide li {
+    padding-left: 1em;
+}
+
+#mobilenav-menu.does-slide ul a {
+    padding: 0.15em 0;
+    display: inline-block;
+}
+
+.full-menu-mobilenav .drop-menu-icon,
+#mobilenav-menu .drop-menu-icon {
+    float: right;
+    padding: 0.15em 0;
+}
+
