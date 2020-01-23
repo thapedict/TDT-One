@@ -526,20 +526,6 @@ blockquote > p {
     font-size: 90%;
 }
 
-#site-header-wrapper > div {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-#woo-site-header-menu {
-    order: 3;
-    margin-top: 1em;
-}
-
-#site-header-cart {
-    position: static;
-}
-
 .woocommerce-mini-cart__empty-message {
     margin: 0;
 }
@@ -726,6 +712,31 @@ figcaption {
 
     .wp-block-columns.has-2-columns > * {
         width: 100%;
+    }
+
+    #site-header-wrapper #menu-wrap #menu {
+        margin-left: 1em;
+        line-height: 1;
+        padding: 0.1em;
+        font-size: 1.2em;
+    }
+    
+    #tdt-mobilenav {
+        padding: 0.1em;
+    }
+
+    #site-header-wrapper > div {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    #woo-site-header-menu {
+        order: 3;
+        margin-top: 1em;
+    }
+    
+    #site-header-cart {
+        position: static;
     }
 }
 
