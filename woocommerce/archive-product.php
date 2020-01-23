@@ -17,9 +17,22 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
+get_header('no-title');
 
 ?>
+
+<section id="main-title">
+    <div class="container align-center">
+        <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+            <h1 id="main-title"><span><?php woocommerce_page_title(); ?></span></h1>
+        <?php endif; ?>
+
+        <?php
+            // Maybe description
+            do_action( 'woocommerce_archive_description' );
+        ?>
+    </div>
+</section>
 
 <section id="main">
 <div class="container">
