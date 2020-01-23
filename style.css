@@ -325,6 +325,10 @@ div#comments > .header {
     margin-top: 2em;
 }
 
+.bypostauthor {
+    background-color: #ccc;
+}
+
 .post-content > .hw-widget {
     padding: 2em 0;
 }
