@@ -36,6 +36,7 @@ if(! function_exists('tdt_one_wp_enqueue_scripts') ) :
         
         wp_enqueue_script('tdt-one-mobilenav-js', $js . 'jquery.mobilenav.js', array( 'jquery' ), TDT_ONE_VERSION );
         wp_enqueue_script('tdt-one-scrolltotop-js', $js . 'jquery.scrolltotop.js', array( 'jquery' ), TDT_ONE_VERSION );
+        wp_enqueue_script('tdt-one-woo-cart-js', $js . 'woo-header-cart.js', array( 'jquery' ), TDT_ONE_VERSION );
         wp_enqueue_script('main', $js . 'main.js', array( 'jquery', 'tdt-one-mobilenav-js', 'tdt-one-scrolltotop-js' ), TDT_ONE_VERSION );
         
         if(is_singular() && comments_open() && get_option('thread_comments') ) {
@@ -383,7 +384,7 @@ if(! function_exists('tdt_one_header_menu') ) :
         }
         
         if(! ( isset($options[ 'with_button' ]) && $options[ 'with_button' ] == false ) ) {
-            print '<div id="tdt-mobilenav" for="#header-menu">
+            print '<div id="tdt-mobilenav" for="#header-menu" style="display:none">
                         <i class="fas fa-bars"></i>
                     </div>';
         }
@@ -656,3 +657,76 @@ function tdt_one_before_header() {
     }
 }
 add_action('body_header_before', 'tdt_one_before_header');
+
+/**
+ * Check to see if woocommerce is activated.
+ * 
+ * @since 1.2.0
+ * 
+ * @return bool True if activatec, false if not.
+ */
+function tdt_one_is_woocommerce_activated() {
+    if( class_exists( 'WooCommerce', false ) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Print header WooCommerce menu & cart.
+ * 
+ * @since 1.2.0
+ */
+function tdt_one_woo_site_header_menu() {
+    if( ! tdt_one_is_woocommerce_activated() ) {
+        return;
+    }
+?>
+    <div id="woo-site-header-menu">
+        <?php tdt_one_print_header_cart(); ?>
+    </div>
+<?php
+}
+
+/**
+ * Prints the woocommerce header cart
+ * 
+ * @since 1.2.0
+ */
+function tdt_one_print_header_cart() {
+    if( ! tdt_one_is_woocommerce_activated() ) {
+        return;
+    }
+
+    $cart_count = intval( WC()->cart->get_cart_contents_count() );
+    $cart_total = WC()->cart->get_cart_subtotal();
+    $cart_url = esc_url( wc_get_cart_url() );
+
+    $tmpl_1 = __( '%d item' );
+    $tmpl_2 = __( '%d items' );
+
+    ?>
+    <div id="site-header-cart">
+        <div id="the-link">
+            <span class="cart-total">
+                <?php _e( $cart_total ); ?>
+            </span> - 
+            <a class="cart-items-total" href="<?php _e( $cart_url ); ?>" title="<?php esc_attr_e( __( 'View Your Shopping Cart' ) ); ?>">
+                <?php
+                    printf( _n( '%d item', '%d items', $cart_count ), $cart_count );
+                ?>
+                <tmpl id="single"><?php echo $tmpl_1; ?></tmpl>
+                <tmpl id="many"><?php echo $tmpl_2; ?></tmpl>
+                <style>
+                    tmpl { display: none}
+                </style>
+            <i class="fa fa-shopping-basket"></i>
+            </a>
+        </div>
+        <div id="the-cart">
+            <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+        </div>
+    </div>
+    <?php
+}
