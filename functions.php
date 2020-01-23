@@ -703,18 +703,18 @@ function tdt_one_print_header_cart() {
     $cart_total = WC()->cart->get_cart_subtotal();
     $cart_url = esc_url( wc_get_cart_url() );
 
-    $tmpl_1 = __( '%d item' );
-    $tmpl_2 = __( '%d items' );
+    $tmpl_1 = __( '%d item', 'tdt-one' );
+    $tmpl_2 = __( '%d items', 'tdt-one' );
 
     ?>
     <div id="site-header-cart">
         <div id="the-link">
             <span class="cart-total">
-                <?php _e( $cart_total ); ?>
+                <?php echo $cart_total; ?>
             </span> - 
-            <a class="cart-items-total" href="<?php _e( $cart_url ); ?>" title="<?php esc_attr_e( __( 'View Your Shopping Cart' ) ); ?>">
+            <a class="cart-items-total" href="<?php echo $cart_url; ?>" title="<?php esc_attr_e( __( 'View Your Shopping Cart', 'tdt-one' ) ); ?>">
                 <?php
-                    printf( _n( '%d item', '%d items', $cart_count ), $cart_count );
+                    printf( _n( '%d item', '%d items', $cart_count, 'tdt-one' ), $cart_count );
                 ?>
                 <tmpl id="single"><?php echo $tmpl_1; ?></tmpl>
                 <tmpl id="many"><?php echo $tmpl_2; ?></tmpl>
