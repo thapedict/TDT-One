@@ -161,13 +161,18 @@ article .post-excerpt a.excerpt-more {
     font-size: 90%;
 }
 
+.post-content .wp-block-file__button,
 .post-content .wp-block-button__link {
   border-radius: 2px;
 }
 
-.post-content a:not(.wp-block-button__link) {
+.post-content a:not(.wp-block-button__link,.wp-block-file__button) {
     border-bottom: 1px solid;
     padding-bottom: 0.1em;
+}
+
+.wp-block-file a:not(.wp-block-file__button) {
+    text-decoration: underline;
 }
 
 .format-link .post-content,
@@ -182,12 +187,16 @@ article .post-excerpt a.excerpt-more {
   clear: both;
 }
 
-.post-content > .post-tags .label {
-  font: 95% bold;
+.full-post > .post-tags {
+    margin-top: 2em;
+    font-size: smaller;
+    border-top: 1px dotted;
+    padding-top: 0.5em;
 }
 
-.post-content > .post-tags .tag {
-  padding-left: 0.3em;
+.full-post > .post-tags > .label {
+    font-weight: bold;
+    padding-right: 0.5em;
 }
 
 .prev-next-post-links {
@@ -393,17 +402,32 @@ blockquote > p {
     text-align: center;
 }
 
+.wp-block-separator {
+    margin-bottom: 1.5em;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.wp-block-separator.is-style-wide {
+    width: 100%;
+    margin-left: 0;
+}
+
+.wp-block-pullquote p:before,
+.wp-block-pullquote p:after,
 .post.format-quote blockquote:before,
 .post.format-quote blockquote:after {
     font-size: 3em;
 }
 
+.wp-block-pullquote p:before,
 .post.format-quote blockquote:before {
     content: open-quote;
     float: left;
     margin-top:  -0.6em;
 }
 
+.wp-block-pullquote p:after,
 .post.format-quote blockquote:after {
     content: close-quote;
     float: right;
@@ -425,6 +449,10 @@ blockquote > p {
 
 .format-gallery .gallery-preview {
     margin: 1em;
+}
+
+.wp-block-cover p.wp-block-cover-text {
+    color: #fff;
 }
 
 .wp-block-pullquote {
@@ -464,12 +492,131 @@ blockquote > p {
     padding: 1em;
 }
 
+#woo-site-header-menu {
+    margin-bottom: 1em;
+}
+
+#site-header-cart {
+    font-size: 90%;
+    position: fixed;
+    z-index: 5;
+    text-align: right;
+    top: 1em;
+    right: 5em;
+}
+
+#site-header-cart  #the-link {
+    padding: 0.5em;
+    background-color: #fff;
+    border: 1px solid #eef;
+}
+
+#site-header-cart .cart-total {
+    font-weight: bold;
+}
+
+#site-header-cart #the-cart {
+    display: none;
+    position: absolute;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px;
+    right: 0;
+    min-width: 300px;
+    background-color: #fcfcfc;
+    font-size: 90%;
+}
+
+#site-header-wrapper > div {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#woo-site-header-menu {
+    order: 3;
+    margin-top: 1em;
+}
+
+#site-header-cart {
+    position: static;
+}
+
+.woocommerce-mini-cart__empty-message {
+    margin: 0;
+}
+
+.woocommerce-mini-cart__buttons {
+    margin-bottom: 0;
+}
+
+.woocommerce ul.products li.product .price del {
+    font-size: 95%;
+}
+
 .woocommerce-loop-category__title {
     text-align: center;
 }
 
 .woocommerce-loop-category__title mark {
     background-color: transparent;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    padding: 0.5em 0.8em;
+}
+
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+    background-color: #a7a7a7;
+}
+
+.cart .input-text.qty {
+    padding: 0.4em;
+    font-size: 95%;
+}
+
+.woocommerce table.shop_attributes td {
+    padding: 0.5em;
+}
+
+.woocommerce .woocommerce-product-attributes p:first-child {
+    padding-top: 0;
+}
+
+.woocommerce .woocommerce-product-attributes p:last-child {
+    padding-bottom: 0;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    font-size: 95%;
+    text-align: center;
 }
 
 .wc-block-grid__product-price ins {
@@ -486,7 +633,20 @@ blockquote > p {
 button, .button, .big-button, input[type=submit], input[type=reset],
 body > footer #footer-strip,
 section.call-to-action #cta-action .button:hover,
-.has-primary-background-color {
+.has-primary-background-color,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce span.onsale,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
     color: #fff;
 }
 
