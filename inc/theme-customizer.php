@@ -211,20 +211,37 @@ function tdt_one_print_theme_colors()
         #items.items-loop #icon i.fab,
         .format-link .post-content a,
         .full-post .post-pages a,
+        .full-post > .post-tags > .tag,
         header #header-menu .current_page_item > a,
         #mobilenav-menu ul .current_page_item > a,
         .post-summary a.excerpt-more,
         .prev-next-post-links a,
         nav.posts-navigation,
         #comments h2.header,
-        .comment.bypostauthor .fn {
+        .comment.bypostauthor .fn,
+        .woocommerce div.product p.price,
+        .woocommerce div.product span.price,
+        .woocommerce ul.products li.product .price {
             color: $primary_color;
         }
         button, .button, .big-button, input[type=submit], input[type=reset],
         body > footer #footer-strip,
         section.call-to-action #cta-action .button:hover,
         .has-primary-background-color,
-        .wp-block-button__link {
+        .wp-block-button__link,
+        .woocommerce #respond input#submit,
+        .woocommerce a.button,
+        .woocommerce button.button,
+        .woocommerce input.button,
+        .woocommerce span.onsale,
+        .woocommerce #respond input#submit.alt,
+        .woocommerce a.button.alt,
+        .woocommerce button.button.alt,
+        .woocommerce input.button.alt,
+        .woocommerce #respond input#submit.alt:hover,
+        .woocommerce a.button.alt:hover,
+        .woocommerce button.button.alt:hover,
+        .woocommerce input.button.alt:hover {
             background-color: $primary_color;
         }
         blockquote,
@@ -251,7 +268,8 @@ function tdt_one_print_theme_colors()
         .gallery-caption,
         .doing-the-loop .post-excerpt.sticky,
         table.shaded tr:nth-child(2n+3),
-        .full-post .post-pages {
+        .full-post .post-pages,
+        .woocommerce div.product .woocommerce-tabs ul.tabs li {
             background-color: $primary_backcolor;
         }
         body > footer {
