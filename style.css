@@ -336,6 +336,7 @@ div#comments > .header {
 body > footer {
     border-top: 3px solid;
     margin-top: 2em;
+    font-size: 95%;
 }
 
 body > footer > #footer-sidebar {
@@ -755,6 +756,25 @@ figcaption {
         border-bottom: 2px solid #000;
         padding-bottom: 0.3em;
         line-height: 2;
+    }
+
+    .footer-sub-1-widget.widget_archive > ul:after,
+    .footer-sub-1-widget.widget_categories > ul:after,
+    .footer-sub-1-widget.widget_nav_menu .menu:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    .footer-sub-1-widget.widget_archive > ul > li,
+    .footer-sub-1-widget.widget_categories > ul > li,
+    .footer-sub-1-widget.widget_nav_menu .menu > li {
+        width: 50%;
+        float: left;
+    }
+
+    .footer-sub-1-widget.widget_nav_menu .menu .sub-menu {
+        margin: 0 0.2em;
     }
 
 }
