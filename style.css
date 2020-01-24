@@ -718,15 +718,15 @@ figcaption {
         width: 100%;
     }
 
-    #site-header-wrapper #menu-wrap #menu {
-        margin-left: 1em;
+    #site-header-wrapper #menu-wrap {
+        margin: 0 1em;
         line-height: 1;
         padding: 0.1em;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     
-    #tdt-mobilenav {
-        padding: 0.1em;
+    #tdt-mobilenav i {
+        padding: 0.2em 0.1em;
     }
 
     #site-header-wrapper > div {
