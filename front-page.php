@@ -45,15 +45,31 @@
     <div class="container">
         <?php
             if(is_home()&&is_front_page()){
+                // Posts page
                 if(have_posts() ) {
                     get_template_part('parts/the-loop');
                 } else {
                     get_template_part('parts/content-none');
                 }
             } else {
+                // Front page
                 the_post();
-                
-                get_template_part('parts/content', 'page');
+            ?>
+                <article id="post-<?php the_id(); ?>" <?php post_class('full-post'); ?>>
+                    <div class="post-content">
+                    <?php the_content(); ?>
+                    </div>
+                    <?php
+                        global $numpages;
+                            
+                        if($numpages > 1 ) {
+                            print '<div class="post-pages">';
+                            wp_link_pages();
+                            print '</div>';            
+                        }
+                    ?>
+                </article>
+            <?php
             }
         ?>
     </div>
