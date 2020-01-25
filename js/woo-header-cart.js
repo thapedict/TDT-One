@@ -6,6 +6,7 @@
 jQuery(function($){
     var _total = $('#woo-site-header-menu #the-link .amount'),
         _items = $('#woo-site-header-menu #the-link .cart-items-total'),
+        _droparrow = $('#woo-site-header-menu #the-link .drop-arrow'),
         _linkTmplOne = $('#woo-site-header-menu tmpl#single').text(),
         _linkTmplMany = $('#woo-site-header-menu tmpl#many').text();
 
@@ -47,12 +48,18 @@ jQuery(function($){
         return !! (inCart || inLink );
     }
 
-    function hideMenu() {
+    function hideCart() {
         if( inAny() ) {
             return;
         }
 
         Cart.hide();
+        _droparrow.removeClass('fa-angle-up').addClass('fa-angle-down');
+    }
+
+    function showCart() {
+        Cart.show();
+        _droparrow.removeClass('fa-angle-down').addClass('fa-angle-up');
     }
 
     function pauseThenHide() {
@@ -61,13 +68,13 @@ jQuery(function($){
                 return;
             }
 
-            hideMenu();
+            hideCart();
         }, 100);
     }
 
     _items.on('mouseenter', ()=> {
         inLink = true;
-        Cart.show();
+        showCart();
     });
 
     Cart.on('mouseenter',()=> {
@@ -83,4 +90,6 @@ jQuery(function($){
         inLink = false;
         pauseThenHide();
     });
+
+    _droparrow.toggle(showCart, hideCart);
 });

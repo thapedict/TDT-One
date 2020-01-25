@@ -435,7 +435,7 @@ if(! function_exists('tdt_one_get_social_links') ) :
         $social_links = array();
         
         foreach( $sites as $site ) {
-            if($link = get_option("tdt_one_social_link_{$site}") ) {
+            if($link = get_theme_mod("tdt_one_social_link_{$site}") ) {
                 $social_links[ $site ] = array( 'url' => $link );
             }
         }
@@ -452,10 +452,6 @@ if(! function_exists('tdt_one_social_icons') ) :
     function tdt_one_social_icons( $args = array() )
     {
         $social_links = tdt_one_get_social_links();
-        
-        if( empty($social_links) ) {
-            return;
-        }
         
         $defaults = array(    'wrapper'        =>    'div',
           'wrapper_id'    =>    'social-links',
@@ -709,6 +705,7 @@ function tdt_one_print_header_cart() {
     ?>
     <div id="site-header-cart">
         <div id="the-link">
+            <i class="drop-arrow fa fa-angle-down"></i>
             <span class="cart-total">
                 <?php echo $cart_total; ?>
             </span> - 

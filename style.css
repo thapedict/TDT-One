@@ -515,6 +515,12 @@ blockquote > p {
     border: 1px solid #eef;
 }
 
+#the-link .drop-arrow {
+    font-size: 1.5em;
+    padding: 0.1em;
+    float: left;
+}
+
 #site-header-cart .cart-total {
     font-weight: bold;
 }
@@ -743,6 +749,11 @@ figcaption {
         position: static;
     }
     
+    #site-header-cart #the-cart {
+        position: static;
+        min-width: auto;
+    }
+    
     #main .wc-block-grid .wc-block-grid__product {
         max-width:100%;
         flex-basis: 100%;
@@ -759,6 +770,11 @@ figcaption {
     #site-header-wrapper #menu-wrap > * {
         padding: 0;
     }
+    
+    #the-link .drop-arrow {
+        display: none;
+    }
+
 
     section#main-title span {
         text-decoration: none;
