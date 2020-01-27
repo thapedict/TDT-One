@@ -1,5 +1,5 @@
 Theme Name: TDT One
-Version: 1.2.0
+Version: 1.2.1
 Author: Thapelo Moeti
 Author URI: http://www.thapedict.co.za/
 Theme URI:
@@ -33,8 +33,13 @@ License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,
 
 == Changelog ==
 
+= 1.2.1 =
+Fixed some CSS issues
+
 = 1.2.0 =
+Added woocommerce mini cart to the header
 Added some styling for some default gutenberg blocks
+Added some styling for woocommerce
 Templates are now full-width compatible
 Added front-page which is full-width by default
 Added *No Sidebar* page template
