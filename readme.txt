@@ -1,14 +1,12 @@
-Theme Name: TDT One
-Version: 1.2.1
-Author: Thapelo Moeti
-Author URI: http://www.thapedict.co.za/
-Theme URI:
-Text Domain: tdt-one
-License: GNU General Public License v2 or later
+=== TDT One ===
+Contributors: Thapelo Moeti
+Requires at least: 5.3
+Tested up to: 5.3.2
+Stable tag: 1.2.1
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TDT One Theme,  Copyright 2018 Thapelo Moeti
-is distributed under the terms of the GNU GPL
+A simple retro theme with a serif font face to for those who prefer content over looks.
 
 ----------
 
@@ -34,7 +32,7 @@ License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,
 == Changelog ==
 
 = 1.2.1 =
-Fixed some CSS issues
+Fixed some CSS issues based on the 1.2.0 update
 
 = 1.2.0 =
 Added woocommerce mini cart to the header
