@@ -28,6 +28,11 @@
     <div class="post-tags">
     <?php the_tags('<span class="label">' . __('Tags', 'tdt-one') . '</span><span class="tag">', '</span>, <span class="tag">', '</span>'); ?>
     </div>
+    <?php
+    if( get_theme_mod( 'show_post_author_dialog', true ) ) {
+        tdt_one_post_author_dialog();
+    }
+    ?>
     <div class="prev-next-post-links ts-ns-2 ts-s-align-center">
         <div><?php previous_post_link(); ?></div>
         <div class="ts-ns-align-right"><?php next_post_link(); ?></div>
