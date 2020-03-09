@@ -758,3 +758,13 @@ function tdt_one_post_author_dialog( $id = false ) {
     </div>
     <?php
 }
+
+/**
+ * Check if we can show post dialog.
+ */
+function tdt_one_show_post_author_dialog() {
+    if( get_theme_mod( 'show_post_author_dialog', true ) ) {
+        tdt_one_post_author_dialog();
+    }
+}
+add_action( 'after_post_content', 'tdt_one_show_post_author_dialog' );

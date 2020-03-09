@@ -36,10 +36,6 @@
 
     // since 1.2.2
     do_action( 'after_post_content' );
-    
-    if( get_theme_mod( 'show_post_author_dialog', true ) ) {
-        tdt_one_post_author_dialog();
-    }
     ?>
     <div class="prev-next-post-links ts-ns-2 ts-s-align-center">
         <div><?php previous_post_link(); ?></div>
