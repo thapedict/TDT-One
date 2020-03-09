@@ -727,3 +727,34 @@ function tdt_one_print_header_cart() {
     </div>
     <?php
 }
+
+/**
+ * Prints out the post author's dialog
+ * 
+ * @param int $id The user ID of the post author.
+ */
+function tdt_one_post_author_dialog( $id = false ) {
+    $user_id = $id | get_the_author_meta('ID');
+    $author = get_userdata($user_id);
+
+    if( ! $author ){
+        return;
+    }
+
+    $name = esc_html( $author->display_name );
+    $bio = esc_html( $author->description );
+    $url = esc_url( get_author_posts_url($user_id) );
+    ?>
+    <div class="about-author">
+        <h3 class="about"><?php _e( 'About The author', 'tdt-one' ); ?>:</h3>
+        <div class="post-author">
+            <?php echo get_avatar( $user_id, 150, 'mystery' ); ?>
+            <h5 class="name"><a href="<?php echo $url; ?>"><?php echo $name; ?></a></h5>
+            <p class="bio"><?php echo $bio; ?></p>
+        </div>
+        <?php
+            tdt_one_social_icons();
+        ?>
+    </div>
+    <?php
+}
