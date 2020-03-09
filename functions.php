@@ -731,7 +731,7 @@ function tdt_one_print_header_cart() {
 /**
  * Prints out the post author's dialog
  * 
- * @param int $id The user ID of the post author.
+ * @param int $id Optional. The user ID of the post author.
  */
 function tdt_one_post_author_dialog( $id = false ) {
     $user_id = $id | get_the_author_meta('ID');
