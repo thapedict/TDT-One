@@ -7,6 +7,10 @@
         the_post_thumbnail(array( 1024, 1024 ));
         print '</div>';
     }
+
+    // since 1.2.2
+    do_action( 'before_post_content' );
+
     ?>
     <div class="post-content">
     <?php the_content(); ?>
@@ -19,6 +23,10 @@
         wp_link_pages();
         print '</div>';            
     }
+    
+    // since 1.2.2
+    do_action( 'after_post_content' );
+    
     ?>
 </article>
 

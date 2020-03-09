@@ -12,6 +12,10 @@
         the_post_thumbnail(array( 1024, 1024 ));
         print '</div>';
     }
+
+    // since 1.2.2
+    do_action( 'before_post_content' );
+
     ?>
     <div class="post-content">
     <?php the_content(); ?>
@@ -29,6 +33,10 @@
     <?php the_tags('<span class="label">' . __('Tags', 'tdt-one') . '</span><span class="tag">', '</span>, <span class="tag">', '</span>'); ?>
     </div>
     <?php
+
+    // since 1.2.2
+    do_action( 'after_post_content' );
+    
     if( get_theme_mod( 'show_post_author_dialog', true ) ) {
         tdt_one_post_author_dialog();
     }
