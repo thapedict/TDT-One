@@ -9,7 +9,7 @@
     }
 
     // since 1.2.2
-    do_action( 'before_post_content' );
+    do_action( 'before_page_content' );
 
     ?>
     <div class="post-content">
@@ -25,7 +25,7 @@
     }
     
     // since 1.2.2
-    do_action( 'after_post_content' );
+    do_action( 'after_page_content' );
     
     ?>
 </article>
