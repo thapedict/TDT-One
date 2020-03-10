@@ -731,8 +731,6 @@ function tdt_one_print_header_cart() {
 /**
  * Prints out the post author's dialog
  * 
- * @since 1.2.1
- * 
  * @param int $id Optional. The user ID of the post author.
  */
 function tdt_one_post_author_dialog( $id = false ) {
@@ -763,8 +761,6 @@ function tdt_one_post_author_dialog( $id = false ) {
 
 /**
  * Check if we can show post dialog.
- * 
- * @since 1.2.1
  */
 function tdt_one_show_post_author_dialog() {
     if( get_theme_mod( 'show_post_author_dialog', true ) ) {
