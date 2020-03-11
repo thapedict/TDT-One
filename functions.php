@@ -1,6 +1,6 @@
 <?php
 
-define( 'TDT_ONE_VERSION', '1.2.0', true );
+define( 'TDT_ONE_VERSION', '1.2.2', true );
 
 require_once 'inc/theme-customizer.php';
 
@@ -772,3 +772,20 @@ function tdt_one_show_post_author_dialog() {
     }
 }
 add_action( 'after_post_content', 'tdt_one_show_post_author_dialog' );
+
+/**
+ * Add new Pullquote block style.
+ * 
+ * @since 1.2.2
+ */
+function tdt_one_pullquotes_withquotes() {
+    register_block_style(
+        'core/pullquote',
+        array(
+            'name' => 'with-quotes',
+            'label' => __( 'With Quotes', 'tdt-one' ),
+            'style_handle' => 'style-editor'
+        )
+        );
+}
+add_action( 'init', 'tdt_one_pullquotes_withquotes' );

@@ -467,10 +467,6 @@ blockquote > p {
     color: #fff;
 }
 
-.wp-block-pullquote {
-    padding: 2em 0;
-}
-
 .post-content .wp-block-pullquote blockquote {
     background-color: transparent;
     border: none;
@@ -479,19 +475,36 @@ blockquote > p {
     padding: 0.5em;
 }
 
+.wp-block-pullquote {
+    border-width: 4px 0;
+    border-style: solid;
+    margin: 2em 1em;
+    padding: 2.5em 0;
+}
+
 .wp-block-pullquote p {
     font-size: 1.3em;
     padding: 0;
 }
 
-.wp-block-pullquote.with-quotes p:before {
-    content: open-quote;
-    font-size: 2em;
+.wp-block-pullquote.is-style-with-quotes {
+    border-width: 0;
 }
 
-.wp-block-pullquote.with-quotes p:after {
-    content: close-quote;
-    font-size: 2em;
+.wp-block-pullquote.is-style-with-quotes p:before,
+.wp-block-pullquote.is-style-with-quotes p:after {
+    font-size: 3em;
+}
+
+.wp-block-pullquote.is-style-with-quotes p:before {
+    content: '"';
+    float: left;
+    margin-top:  -0.6em;
+}
+
+.wp-block-pullquote.is-style-with-quotes p:after {
+    content: '"';
+    float: right;
 }
 
 .wp-block-quote.is-large,
