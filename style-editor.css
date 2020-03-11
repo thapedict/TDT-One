@@ -1,2 +1,108 @@
 body {
+    font-family: "courier new";
+}
+
+figcaption {
+    font-size: 85%;
+}
+
+.wp-caption,
+.gallery-caption {
+    border: 1px solid;
+    padding: 5px 4px;
+    border-radius: 3px;
+    margin: 1em 0;
+}
+
+.wp-caption.alignnone,
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+    max-width: 100% !important;
+}
+
+.wp-caption-text {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 0.75em;
+}
+
+.wp-caption-text.gallery-caption {
+    margin-top: 0.5em;
+}
+
+body .wp-block-file__button,
+body .wp-block-button__link {
+  border-radius: 2px;
+}
+
+body a:not(.wp-block-button__link,.wp-block-file__button) {
+    border-bottom: 1px solid;
+    padding-bottom: 0.1em;
+}
+
+.wp-block-file a:not(.wp-block-file__button) {
+    text-decoration: underline;
+}
+
+.wp-block-separator {
+    margin-bottom: 1.5em;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.wp-block-separator.is-style-wide {
+    width: 100%;
+    margin-left: 0;
+}
+
+.wp-block-pullquote {
+    border-width: 4px 0;
+    border-style: solid;
+    margin: 2em 1em;
+    padding: 2.5em 0;
+}
+
+.wp-block-pullquote.is-style-with-quotes {
+    border-width: 0;
+}
+
+.wp-block-pullquote.is-style-with-quotes p:before,
+.wp-block-pullquote.is-style-with-quotes p:after {
+    font-size: 3em;
+}
+
+.wp-block-pullquote.is-style-with-quotes p:before {
+    content: '"';
+    float: left;
+    margin-top:  -0.6em;
+}
+
+.wp-block-pullquote.is-style-with-quotes p:after {
+    content: '"';
+    float: right;
+}
+
+.wp-block-pullquote p {
+    font-size: 1.3em;
+    padding: 0;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+    margin: 1em 1em 1em 0;
+    padding: 1em;
+}
+
+.wp-block-columns > p {
+    padding: 1em;
+}
+
+.wp-block-cover .wp-block-cover__inner-container h1,
+.wp-block-cover .wp-block-cover__inner-container h2,
+.wp-block-cover .wp-block-cover__inner-container h3,
+.wp-block-cover .wp-block-cover__inner-container h4,
+.wp-block-cover .wp-block-cover__inner-container h5,
+.wp-block-cover .wp-block-cover__inner-container h6 {
+    color: #000;
 }
