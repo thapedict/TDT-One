@@ -789,3 +789,87 @@ function tdt_one_pullquotes_withquotes() {
         );
 }
 add_action( 'init', 'tdt_one_pullquotes_withquotes' );
+
+/**
+ * Loading dynamic CSS editable only in the customizer
+ * 
+ * @since 1.2.2
+ */
+function tdt_one_gutenberg_assets() {
+    $dynamic_css = tdt_one_get_dynamic_editor_css();
+
+    // Because the editor has it's own life, let's do some overrides
+    $editor_css = get_template_directory_uri() . 'css/gutenberg-editor.css';
+    wp_enqueue_style( 'tdt-one-gutenberg-editor', esc_url( $editor_css ), array(), TDT_ONE_VERSION );
+
+    wp_add_inline_style( 'wp-block-editor', $dynamic_css );
+}
+add_action( 'enqueue_block_editor_assets', 'tdt_one_gutenberg_assets' );
+
+/**
+ * Gets CSS (only for post-content children) modified in the customizer.
+ * 
+ * @since 1.2.2
+ * 
+ * @return string The CSS as string.
+ */
+function tdt_one_get_dynamic_editor_css() {
+    global $tdt_one_primary_color, $tdt_one_primary_backcolor, $tdt_one_footer_backcolor, $tdt_one_footer_textcolor;
+    
+    $primary_color = esc_attr( get_theme_mod('primary_color', $tdt_one_primary_color) );
+    $primary_backcolor = esc_attr( get_theme_mod('primary_backcolor', $tdt_one_primary_backcolor) );
+    $footer_textcolor = esc_attr( get_theme_mod('footer_textcolor', $tdt_one_footer_textcolor) );
+    $footer_backcolor = esc_attr( get_theme_mod('footer_backcolor', $tdt_one_footer_backcolor) );
+
+    // Background: $primary_color
+    $css = "
+        button, .button, input[type=submit], input[type=reset],
+        .has-primary-background-color,
+        .wp-block-button__link,
+        .woocommerce #respond input#submit,
+        .woocommerce a.button,
+        .woocommerce button.button,
+        .woocommerce input.button,
+        .woocommerce span.onsale,
+        .woocommerce #respond input#submit.alt,
+        .woocommerce a.button.alt,
+        .woocommerce button.button.alt,
+        .woocommerce input.button.alt,
+        .woocommerce #respond input#submit.alt:hover,
+        .woocommerce a.button.alt:hover,
+        .woocommerce button.button.alt:hover,
+        .woocommerce input.button.alt:hover {
+            background-color: $primary_color;
+            color: #fff;
+        }";
+
+    // Color: $primary_color
+    $css .= "
+        .woocommerce div.product p.price,
+        .woocommerce div.product span.price,
+        .woocommerce ul.products li.product .price {
+            color: $primary_color;
+        }";
+
+    // Border: $primary_color
+    $css .= "
+        blockquote,
+        .wp-block-quote,
+        .wp-caption,
+        .gallery-caption,
+        input, select, textarea {
+            border-color: $primary_color;
+        }";
+
+    // Background: $primary_backcolor
+    $css .= "
+        blockquote,
+        .wp-caption,
+        .gallery-caption,
+        table.shaded tr:nth-child(2n+3),
+        .woocommerce div.product .woocommerce-tabs ul.tabs li {
+            background-color: $primary_backcolor;
+        }";
+
+    return $css;
+}
