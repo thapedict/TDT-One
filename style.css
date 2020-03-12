@@ -402,7 +402,13 @@ nav.posts-navigation .nav-links > div.nav-next {
 
 blockquote > p {
     margin: 0;
-    padding: 1em 0;
+    padding-bottom: 1em;
+}
+
+.wp-block-quote {
+    margin: 1em 1em 1em 0;
+    padding: 1em;
+    border-width: 5px;
 }
 
 .post.format-quote blockquote {
