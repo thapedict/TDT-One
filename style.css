@@ -425,21 +425,17 @@ blockquote > p {
     margin-left: 0;
 }
 
-.wp-block-pullquote p:before,
-.wp-block-pullquote p:after,
 .post.format-quote blockquote:before,
 .post.format-quote blockquote:after {
     font-size: 3em;
 }
 
-.wp-block-pullquote p:before,
 .post.format-quote blockquote:before {
     content: open-quote;
     float: left;
     margin-top:  -0.6em;
 }
 
-.wp-block-pullquote p:after,
 .post.format-quote blockquote:after {
     content: close-quote;
     float: right;
