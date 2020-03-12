@@ -855,6 +855,7 @@ function tdt_one_get_dynamic_editor_css() {
     $css .= "
         blockquote,
         .wp-block-quote,
+        .wp-block-quote.has-text-align-right,
         .wp-caption,
         .gallery-caption,
         input, select, textarea {

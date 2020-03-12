@@ -405,7 +405,8 @@ blockquote > p {
     padding-bottom: 1em;
 }
 
-.wp-block-quote {
+.wp-block-quote,
+.wp-block-quote.has-text-align-right {
     margin: 1em 1em 1em 0;
     padding: 1em;
     border-width: 5px;
@@ -482,6 +483,10 @@ blockquote > p {
     border-style: solid;
     margin: 2em 1em;
     padding: 2.5em 0;
+}
+
+.wp-block-pullquote blockquote {
+    background-color: inherit;
 }
 
 .wp-block-pullquote p {
