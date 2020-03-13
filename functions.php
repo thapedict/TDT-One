@@ -8,14 +8,14 @@ if(! isset($content_width) ) {
     $content_width = 800;
 }
 
-function tdt_one_get_uri()
+function tdt_one_get_uri( $append = '' )
 {
-    return esc_url(get_template_directory_uri());
+    return esc_url( get_template_directory_uri() . $append );
 }
 
-function tdt_one_esc_permalink()
+function tdt_one_esc_permalink( $append = '' )
 {
-    return esc_url(get_permalink());
+    return esc_url( get_permalink() . $append );
 }
 
 /**
