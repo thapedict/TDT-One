@@ -892,7 +892,7 @@ function tdt_one_is_jetpack_active() {
  * @since 1.2.2
  */
 function tdt_one_jetpack_css() {
-        wp_enqueue_style( 'tdt-one-jetpack', tdt_one_get_uri( '/css/jetpack.css' ), array(), TDT_ONE_VERSION );
+        wp_enqueue_style( 'tdt-one-jetpack', tdt_one_get_uri( '/css/jetpack.css' ), array('sharedaddy'), TDT_ONE_VERSION );
 }
 if( tdt_one_is_jetpack_active() ) {
     add_action( 'wp_enqueue_scripts', 'tdt_one_jetpack_css' );
