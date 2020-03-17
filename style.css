@@ -564,91 +564,6 @@ blockquote > p {
     font-size: 90%;
 }
 
-.woocommerce-mini-cart__empty-message {
-    margin: 0;
-}
-
-.woocommerce-mini-cart__buttons {
-    margin-bottom: 0;
-}
-
-.woocommerce ul.products li.product .price del {
-    font-size: 95%;
-}
-
-.woocommerce-loop-category__title {
-    text-align: center;
-}
-
-.woocommerce-loop-category__title mark {
-    background-color: transparent;
-}
-
-.woocommerce #respond input#submit, 
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-    padding: 0.5em 0.8em;
-}
-
-.woocommerce #respond input#submit.alt.disabled,
-.woocommerce #respond input#submit.alt.disabled:hover,
-.woocommerce #respond input#submit.alt:disabled,
-.woocommerce #respond input#submit.alt:disabled:hover,
-.woocommerce #respond input#submit.alt:disabled[disabled],
-.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
-.woocommerce a.button.alt.disabled,
-.woocommerce a.button.alt.disabled:hover,
-.woocommerce a.button.alt:disabled,
-.woocommerce a.button.alt:disabled:hover,
-.woocommerce a.button.alt:disabled[disabled],
-.woocommerce a.button.alt:disabled[disabled]:hover,
-.woocommerce button.button.alt.disabled,
-.woocommerce button.button.alt.disabled:hover,
-.woocommerce button.button.alt:disabled,
-.woocommerce button.button.alt:disabled:hover,
-.woocommerce button.button.alt:disabled[disabled],
-.woocommerce button.button.alt:disabled[disabled]:hover,
-.woocommerce input.button.alt.disabled,
-.woocommerce input.button.alt.disabled:hover,
-.woocommerce input.button.alt:disabled,
-.woocommerce input.button.alt:disabled:hover,
-.woocommerce input.button.alt:disabled[disabled],
-.woocommerce input.button.alt:disabled[disabled]:hover {
-    background-color: #a7a7a7;
-}
-
-.cart .input-text.qty {
-    padding: 0.4em;
-    font-size: 95%;
-}
-
-.woocommerce table.shop_attributes td {
-    padding: 0.5em;
-}
-
-.woocommerce .woocommerce-product-attributes p:first-child {
-    padding-top: 0;
-}
-
-.woocommerce .woocommerce-product-attributes p:last-child {
-    padding-bottom: 0;
-}
-
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-    font-size: 95%;
-    text-align: center;
-}
-
-.wc-block-grid__product-price ins {
-    font-size: larger;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 /**
 *****************************
 *   COLORS
@@ -657,20 +572,7 @@ blockquote > p {
 button, .button, .big-button, input[type=submit], input[type=reset],
 body > footer #footer-strip,
 section.call-to-action #cta-action .button:hover,
-.has-primary-background-color,
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button,
-.woocommerce span.onsale,
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
+.has-primary-background-color {
     color: #fff;
 }
 
@@ -767,30 +669,6 @@ figcaption {
         display: flex;
         flex-flow: column nowrap;
     }
-    
-    #woo-site-header-menu {
-        order: 3;
-        margin-top: 1em;
-    }
-    
-    #site-header-cart {
-        position: static;
-    }
-    
-    #site-header-cart #the-cart {
-        position: static;
-        min-width: auto;
-    }
-    
-    #main .wc-block-grid .wc-block-grid__product {
-        max-width:100%;
-        flex-basis: 100%;
-    }
-
-    .woocommerce ul.products[class*=columns-] li.product,
-    .woocommerce-page ul.products[class*=columns-] li.product {
-        width: 98%;
-    }
 }
 
 @media screen and (min-width: 768px){
@@ -833,10 +711,7 @@ figcaption {
 }
 
 @media screen and (min-width: 768px) and (max-width: 959.99px){
-    #main .wc-block-grid.has-4-columns .wc-block-grid__product {
-        max-width: 50%;
-        flex-basis: 50%;
-    }
+
 }
 
 @media screen and (min-width: 960px) and (max-width: 1199.99px){
