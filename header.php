@@ -57,6 +57,6 @@ if(! is_home() && ! is_front_page() ) {
             <div class="container align-center">
                 <h1 id="main-title"><span>%s</span></h1>
             </div>
-        </section>', esc_html( tdt_one_wp_title() )
+        </section>', wp_kses_post( tdt_one_wp_title() )
     );
 }
