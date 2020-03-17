@@ -7,13 +7,11 @@ $archive_description = get_the_archive_description();
 
 if( $archive_description ):
 ?>
-<div>
-    <div class="container">
-        <p>
-            <?php echo wp_kses_post( $archive_description ); ?>
-        </p>
+<section id="description">
+    <div class="container align-center">
+        <?php echo wp_kses_post( wpautop( $archive_description ) ); ?>
     </div>
-</div>
+</section>
 <?php endif; ?>
 
 <section id="main">
