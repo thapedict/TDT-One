@@ -897,3 +897,15 @@ function tdt_one_jetpack_css() {
 if( tdt_one_is_jetpack_active() ) {
     add_action( 'wp_enqueue_scripts', 'tdt_one_jetpack_css' );
 }
+
+/**
+ * Load Woocommerce override CSS.
+ * 
+ * @since 1.2.2
+ */
+function tdt_one_woocommerce_css() {
+        wp_enqueue_style( 'tdt-one-woocommerce', tdt_one_get_uri( '/css/woocommerce.css' ), array('tdt-one-style'), TDT_ONE_VERSION );
+}
+if( tdt_one_is_woocommerce_activated() ) {
+    add_action( 'wp_enqueue_scripts', 'tdt_one_woocommerce_css' );
+}
