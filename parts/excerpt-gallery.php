@@ -8,12 +8,12 @@
     </div>
     <div class="post-excerpt">
     <?php 
-    the_excerpt();
+    tdt_one_preview_gallery();
     ?>
     </div>
     <div class="other-links" class="ts-dl-1-2 small">
         <div class="post-more">
-    <?php printf('<a href="%s" class="button">%s</a>', tdt_one_esc_permalink(), __('Read More', 'tdt-one')); ?>
+    <?php printf('<a href="%s" class="button">%s</a>', tdt_one_esc_permalink(), __('View Gallery', 'tdt-one')); ?>
         </div>
     </div>
 </article>
