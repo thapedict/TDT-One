@@ -268,16 +268,9 @@ if(! function_exists('tdt_one_wp_title') ) :
                 $page = get_page($pp);
                 $title = $page->post_title;
             }
-        }elseif(is_category() ) {
-            $title = single_cat_title(__('Category', 'tdt-one'). ': ', false);
-        }elseif(is_tag() ) {
-            $title = single_tag_title(__('Tag', 'tdt-one'). ': ', false);
-        }elseif(is_day() ) {
-            $title = __('Posts Posted on ', 'tdt-one') . get_the_date('jS F Y');
-        }elseif(is_month() ) {
-            $title = __('Posts for ', 'tdt-one') . get_the_date('F Y');
-        }elseif(is_year() ) {
-            $title = __('Posts For The Year', 'tdt-one') . ': ' . get_the_date('Y');
+        }elseif(is_archive() ) {
+            // @since 1.2.2
+            $title = get_the_archive_title();
         }elseif(is_search() ) {
             $title = __('Search Results For', 'tdt-one') . ': '  . htmlspecialchars($_GET['s']);
         }elseif(is_404() ) {
