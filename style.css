@@ -72,6 +72,11 @@ body > header {
     text-transform: uppercase;
 }
 
+section#description {
+    padding: 0;
+    margin-top: -2.5em;
+}
+
 figcaption {
     font-size: 85%;
 }
