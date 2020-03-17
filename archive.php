@@ -2,7 +2,19 @@
 
 get_header();
 
+// @since 1.2.2
+$archive_description = get_the_archive_description();
+
+if( $archive_description ):
 ?>
+<div>
+    <div class="container">
+        <p>
+            <?php echo wp_kses_post( $archive_description ); ?>
+        </p>
+    </div>
+</div>
+<?php endif; ?>
 
 <section id="main">
     <div class="container">
