@@ -740,16 +740,17 @@ function tdt_one_post_author_dialog( $id = false ) {
     $bio = esc_html( $author->description );
     $url = esc_url( get_author_posts_url($user_id) );
     ?>
-    <div class="about-author">
+    <div class="about-the-author">
         <h3 class="about"><?php _e( 'About The author', 'tdt-one' ); ?>:</h3>
-        <div class="post-author">
+        <div class="author">
             <?php echo get_avatar( $user_id, 150, 'mystery' ); ?>
-            <h5 class="name"><a href="<?php echo $url; ?>"><?php echo $name; ?></a></h5>
-            <p class="bio"><?php echo $bio; ?></p>
+            <h5 class="name"><?php echo $name; ?></h5>
+            <?php
+                tdt_one_social_icons();
+            ?>
         </div>
-        <?php
-            tdt_one_social_icons();
-        ?>
+        <p class="bio"><?php echo $bio; ?></p>
+        <a class="all-posts" href="<?php echo $url; ?>"><?php _e( 'View all Posts', 'tdt-one' ); ?></a>
     </div>
     <?php
 }

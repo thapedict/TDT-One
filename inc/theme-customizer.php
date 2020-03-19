@@ -269,7 +269,8 @@ function tdt_one_print_theme_colors()
         .doing-the-loop .post-excerpt.sticky,
         table.shaded tr:nth-child(2n+3),
         .full-post .post-pages,
-        .woocommerce div.product .woocommerce-tabs ul.tabs li {
+        .woocommerce div.product .woocommerce-tabs ul.tabs li,
+        .about-the-author {
             background-color: $primary_backcolor;
         }
         body > footer {

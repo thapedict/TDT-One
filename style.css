@@ -202,12 +202,47 @@ article .post-excerpt a.excerpt-more {
     padding-right: 0.5em;
 }
 
-.full-post .about-author {
+.about-the-author {
     margin-top: 2em;
 }
 
-.full-post .about-author .about {
+.about-the-author .about,
+.about-the-author .all-posts {
     font-size: 0.8em;
+}
+
+.about-the-author .name,
+.about-the-author .all-posts {
+    font-weight: bold;
+}
+
+.about-the-author .about,
+.about-the-author .all-posts {
+    text-transform: uppercase;
+}
+
+.about-the-author {
+    padding: 0.5em 1em;
+}
+
+.about-the-author img {
+    float: left;
+    height: 5em;
+    border-radius: 50%;
+    width: 5em;
+    margin: 0 0.5em 0.3em 0;
+}
+
+.about-the-author .all-posts {
+    display: block;
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+.about-the-author:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 .prev-next-post-links {
