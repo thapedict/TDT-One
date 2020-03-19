@@ -79,6 +79,19 @@ section#description {
     margin-top: -2.5em;
 }
 
+body.author section#main-title {
+    padding-bottom: 0;
+}
+
+body.author h1#main-title {
+    margin-bottom: 0;
+}
+
+body.author .about-the-author {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
 figcaption {
     font-size: 85%;
 }
