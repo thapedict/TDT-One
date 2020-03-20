@@ -318,15 +318,16 @@ add_action('customize_register', 'tdt_one_customize_full_width');
  *  Adding full-width to the body class
  *
  *  @since 1.2.0
+ * 
+ * @param array $classes Classes passed down the filter queue.
+ * @return array Classes after adding
  */
-function tdt_one_full_width_class( $classes )
+function tdt_one_add_full_width_class( $classes )
 {
-    $is_full_width = (bool) get_theme_mod('tdt_one_is_full_width', false);
-
-    if($is_full_width) {
-        $classes[] = 'full-width';
+    if( tdt_one_site_is_full_width() ) {
+        $classes[] = 'page-full-width';
     }
 
     return $classes;
 }
-add_filter('body_class', 'tdt_one_full_width_class');
+add_filter('body_class', 'tdt_one_add_full_width_class');
