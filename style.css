@@ -687,13 +687,13 @@ figcaption {
     }
     
     body.front-page .alignfull,
-    body.page-template-full-width .alignfull {
+    body.page-full-width .alignfull {
         width: calc(100% + 2em);
         margin-left: -1em;
     }
 
-    body.full-width > * > .container,    
-    body.full-width > * > * > .container {
+    body.page-full-width > * > .container,    
+    body.page-full-width > * > * > .container {
         display: block;
         padding: 0 5em;
         width: auto;
@@ -777,15 +777,15 @@ figcaption {
     
     body.front-page > * > .container,    
     body.front-page > * > * > .container,
-    body.page-template-full-width > * > .container,    
-    body.page-template-full-width > * > * > .container {
+    body.page-full-width > * > .container,    
+    body.page-full-width > * > * > .container {
         display: block;
         padding: 0 5em;
         width: auto;
     }
 
     body.front-page .alignfull,
-    body.page-template-full-width .alignfull {
+    body.page-full-width .alignfull {
         width: calc(100% + 10em);
         margin-left: -5em;
     }
