@@ -59,6 +59,7 @@ body > header {
 
 #site-header #site-name {
     font-size: 2.6em;
+    font-weight: normal;
 }
 
 #site-header #site-description {
