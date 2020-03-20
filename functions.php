@@ -919,3 +919,25 @@ function tdt_one_site_is_full_width() {
 
     return $is_full_width;
 }
+
+/**
+ * Remove full width class from body class array
+ * 
+ * @since 1.2.2
+ */
+function tdt_one_remove_full_width() {
+    add_filter( 'body_class', function( $classes ) {
+        if( in_array( 'page-full-width', $classes ) ) {
+            $classes = array_filter( $classes, function( $val ) {
+                if( 'page-full-width' === $val ) {
+                    return false;
+                }
+                return true;
+            });
+
+            $classes = array_merge( $classes );
+        }
+
+        return $classes;
+    }, 10 );
+}
