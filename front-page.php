@@ -15,6 +15,9 @@
 <header>
     <section id="site-header-wrapper">
         <div class="container">
+            <?php
+                tdt_one_woo_site_header_menu();
+            ?>
             <div id="site-header" class="align-center">
                 <?php
                     tdt_one_site_header(array( 'print_description' => true ));
