@@ -904,3 +904,18 @@ function tdt_one_woocommerce_css() {
 if( tdt_one_is_woocommerce_activated() ) {
     add_action( 'wp_enqueue_scripts', 'tdt_one_woocommerce_css' );
 }
+
+/**
+ * Checks to see if site is full width
+ * 
+ * @since 1.2.2
+ * 
+ * @return bool TRUE when set to full width, false if not.
+ */
+function tdt_one_site_is_full_width() {
+    $is_full_width = false;
+
+    $is_full_width = (bool) get_theme_mod( 'tdt_one_is_full_width', false );
+
+    return $is_full_width;
+}
