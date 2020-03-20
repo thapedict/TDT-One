@@ -739,6 +739,7 @@ function tdt_one_post_author_dialog( $id = false ) {
     $name = esc_html( $author->display_name );
     $bio = esc_html( $author->description );
     $url = esc_url( get_author_posts_url($user_id) );
+    $view_all_label = __( 'View All Posts By', 'tdt-one' ) . " $name &raquo;";
     ?>
     <div class="about-the-author">
         <h3 class="about"><?php _e( 'About The author', 'tdt-one' ); ?>:</h3>
@@ -750,7 +751,7 @@ function tdt_one_post_author_dialog( $id = false ) {
             ?>
         </div>
         <p class="bio"><?php echo $bio; ?></p>
-        <a class="all-posts" href="<?php echo $url; ?>"><?php _e( 'View all Posts', 'tdt-one' ); ?></a>
+        <a class="all-posts" href="<?php echo $url; ?>" title="<?php ; echo $view_all_label; ?>"><?php ; echo $view_all_label; ?></a>
     </div>
     <?php
 }
