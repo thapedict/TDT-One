@@ -31,6 +31,20 @@ License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,
 
 == Changelog ==
 
+= 1.3.0 =
+Added post author dialog
+Fixed Full Width issue on some pages and posts
+Fixed woocommerce cart issues
+Added author template
+Fixed #site-name showing bold on some pages
+Fixed archive title not showing
+Archive pages now shows description. Eg. Category now show Category description
+Added gallery previewer to post excerpt of post format gallery
+Added action hooks for before & after post content
+Added new block-pullquote style
+Updated block editor styling
+Styling for Jetpack sharedaddy Icons
+
 = 1.2.1 =
 Fixed some CSS issues based on the 1.2.0 update
 
