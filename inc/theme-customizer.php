@@ -331,3 +331,32 @@ function tdt_one_add_full_width_class( $classes )
     return $classes;
 }
 add_filter('body_class', 'tdt_one_add_full_width_class');
+
+/**
+ * Setting to show Post Author Dialog.
+ * 
+ * @since 1.2.2
+ * 
+ * @param Customizer $customize The WP_Customize_Manager.
+ */
+function tdt_one_customize_author_dialog( $customize ) {
+    $customize->add_setting(
+        'tdt_one_show_author_dialog',
+        array(
+            'default' => true,
+        )
+    );
+
+    $customize->add_control(
+        new WP_Customize_Control(
+            $customize,
+            'tdt_one_show_author_dialog',
+            array(
+                'label' => __('Show Post Author Dialog', 'tdt-one'),
+                'type' => 'checkbox',
+                'section' => 'tdt_one_theme_settings',
+            )
+        )
+    );
+}
+add_action('customize_register', 'tdt_one_customize_author_dialog');
