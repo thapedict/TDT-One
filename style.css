@@ -685,8 +685,7 @@ figcaption {
         width: 50%;
         margin: 0 1em 0 0;
     }
-    
-    body.front-page .alignfull,
+
     body.page-full-width .alignfull {
         width: calc(100% + 2em);
         margin-left: -1em;
@@ -774,9 +773,7 @@ figcaption {
 }
 
 @media screen and (min-width: 1200px){
-    
-    body.front-page > * > .container,    
-    body.front-page > * > * > .container,
+
     body.page-full-width > * > .container,    
     body.page-full-width > * > * > .container {
         display: block;
@@ -784,7 +781,6 @@ figcaption {
         width: auto;
     }
 
-    body.front-page .alignfull,
     body.page-full-width .alignfull {
         width: calc(100% + 10em);
         margin-left: -5em;
