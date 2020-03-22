@@ -762,7 +762,7 @@ function tdt_one_post_author_dialog( $id = false ) {
  * @since 1.2.2
  */
 function tdt_one_show_post_author_dialog() {
-    if( get_theme_mod( 'show_post_author_dialog', true ) ) {
+    if( get_theme_mod( 'tdt_one_show_author_dialog', true ) ) {
         tdt_one_post_author_dialog();
     }
 }
