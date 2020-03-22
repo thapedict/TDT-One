@@ -8,7 +8,7 @@
         print '</div>';
     }
 
-    // since 1.2.2
+    // since 1.3.0
     do_action( 'before_page_content' );
 
     ?>
@@ -24,7 +24,7 @@
         print '</div>';            
     }
     
-    // since 1.2.2
+    // since 1.3.0
     do_action( 'after_page_content' );
     
     ?>

@@ -13,7 +13,7 @@
         print '</div>';
     }
 
-    // since 1.2.2
+    // since 1.3.0
     do_action( 'before_post_content' );
 
     ?>
@@ -34,7 +34,7 @@
     </div>
     <?php
 
-    // since 1.2.2
+    // since 1.3.0
     do_action( 'after_post_content' );
     ?>
     <div class="prev-next-post-links ts-ns-2 ts-s-align-center">

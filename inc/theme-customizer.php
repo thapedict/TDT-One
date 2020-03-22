@@ -335,7 +335,7 @@ add_filter('body_class', 'tdt_one_add_full_width_class');
 /**
  * Setting to show Post Author Dialog.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @param Customizer $customize The WP_Customize_Manager.
  */

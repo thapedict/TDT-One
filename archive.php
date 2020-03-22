@@ -2,7 +2,7 @@
 
 get_header();
 
-// @since 1.2.2
+// @since 1.3.0
 $archive_description = get_the_archive_description();
 
 if( $archive_description ):

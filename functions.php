@@ -1,6 +1,6 @@
 <?php
 
-define( 'TDT_ONE_VERSION', '1.2.2', true );
+define( 'TDT_ONE_VERSION', '1.3.0', true );
 
 require_once 'inc/theme-customizer.php';
 
@@ -269,7 +269,7 @@ if(! function_exists('tdt_one_wp_title') ) :
                 $title = $page->post_title;
             }
         }elseif(is_archive() ) {
-            // @since 1.2.2
+            // @since 1.3.0
             $title = get_the_archive_title();
         }elseif(is_search() ) {
             $title = __('Search Results For', 'tdt-one') . ': '  . htmlspecialchars($_GET['s']);
@@ -724,7 +724,7 @@ function tdt_one_print_header_cart() {
 /**
  * Prints out the post author's dialog
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @param int $id Optional. The user ID of the post author.
  */
@@ -759,7 +759,7 @@ function tdt_one_post_author_dialog( $id = false ) {
 /**
  * Check if we can show post dialog.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_show_post_author_dialog() {
     if( get_theme_mod( 'tdt_one_show_author_dialog', true ) ) {
@@ -771,7 +771,7 @@ add_action( 'after_post_content', 'tdt_one_show_post_author_dialog' );
 /**
  * Add new Pullquote block style.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_pullquotes_withquotes() {
     register_block_style(
@@ -788,7 +788,7 @@ add_action( 'init', 'tdt_one_pullquotes_withquotes' );
 /**
  * Loading dynamic CSS editable only in the customizer
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_gutenberg_assets() {
     $dynamic_css = tdt_one_get_dynamic_editor_css();
@@ -804,7 +804,7 @@ add_action( 'enqueue_block_editor_assets', 'tdt_one_gutenberg_assets' );
 /**
  * Gets CSS (only for post-content children) modified in the customizer.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @return string The CSS as string.
  */
@@ -873,7 +873,7 @@ function tdt_one_get_dynamic_editor_css() {
 /**
  * Check if Jetpack is active.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @return bool true if Jetpack is active, false if not.
  */
@@ -884,7 +884,7 @@ function tdt_one_is_jetpack_active() {
 /**
  * Load Jetpack override CSS.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_jetpack_css() {
         wp_enqueue_style( 'tdt-one-jetpack', tdt_one_get_uri( '/css/jetpack.css' ), array('sharedaddy'), TDT_ONE_VERSION );
@@ -896,7 +896,7 @@ if( tdt_one_is_jetpack_active() ) {
 /**
  * Load Woocommerce override CSS.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_woocommerce_css() {
         wp_enqueue_style( 'tdt-one-woocommerce', tdt_one_get_uri( '/css/woocommerce.css' ), array('tdt-one-style'), TDT_ONE_VERSION );
@@ -908,7 +908,7 @@ if( tdt_one_is_woocommerce_activated() ) {
 /**
  * Checks to see if site is full width
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @return bool TRUE when set to full width, false if not.
  */
@@ -923,7 +923,7 @@ function tdt_one_site_is_full_width() {
 /**
  * Remove full width class from body class array
  * 
- * @since 1.2.2
+ * @since 1.3.0
  */
 function tdt_one_remove_full_width() {
     add_filter( 'body_class', function( $classes ) {
@@ -945,7 +945,7 @@ function tdt_one_remove_full_width() {
 /**
  * Change template name when site is in full width.
  * 
- * @since 1.2.2
+ * @since 1.3.0
  * 
  * @param string $template The default template to load.
  * 
