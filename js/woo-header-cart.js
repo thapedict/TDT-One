@@ -7,6 +7,7 @@ jQuery(function($){
     var _total = $('#woo-site-header-menu #the-link .amount'),
         _items = $('#woo-site-header-menu #the-link .cart-items-total'),
         _droparrow = $('#woo-site-header-menu #the-link .drop-arrow'),
+        _linkTmplZero = $('#woo-site-header-menu tmpl#zero').text(),
         _linkTmplOne = $('#woo-site-header-menu tmpl#single').text(),
         _linkTmplMany = $('#woo-site-header-menu tmpl#many').text();
 
@@ -32,11 +33,16 @@ jQuery(function($){
         });
 
         // update
-        _total.html(_cartTotal.html());
-        if(itemsCount === 1) {
-            _items.html( _linkTmplOne.replace(/\%d/, itemsCount) );
+        if(itemsCount === 0) {
+            _total.html( _total.text().replace(/\d+\.\d+/,'0.00') );
+            _items.html( _linkTmplZero );
         } else {
-            _items.html( _linkTmplMany.replace(/\%d/, itemsCount) );
+            _total.html(_cartTotal.html());
+            if(itemsCount === 1) {
+                _items.html( _linkTmplOne.replace(/\%d/, itemsCount) );
+            } else {
+                _items.html( _linkTmplMany.replace(/\%d/, itemsCount) );
+            }
         }
 
     };

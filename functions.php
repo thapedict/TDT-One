@@ -692,6 +692,7 @@ function tdt_one_print_header_cart() {
     $cart_total = WC()->cart->get_cart_subtotal();
     $cart_url = esc_url( wc_get_cart_url() );
 
+    $tmpl_0 = __( '0 items', 'tdt-one' );
     $tmpl_1 = __( '%d item', 'tdt-one' );
     $tmpl_2 = __( '%d items', 'tdt-one' );
 
@@ -706,13 +707,14 @@ function tdt_one_print_header_cart() {
                 <?php
                     printf( _n( '%d item', '%d items', $cart_count, 'tdt-one' ), $cart_count );
                 ?>
+                <tmpl id="zero"><?php echo $tmpl_0; ?></tmpl>
                 <tmpl id="single"><?php echo $tmpl_1; ?></tmpl>
                 <tmpl id="many"><?php echo $tmpl_2; ?></tmpl>
                 <style>
                     tmpl { display: none}
                 </style>
-            <i class="fa fa-shopping-basket"></i>
             </a>
+            <i class="fa fa-shopping-basket"></i>
         </div>
         <div id="the-cart">
             <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
