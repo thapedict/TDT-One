@@ -917,7 +917,7 @@ if( tdt_one_is_woocommerce_activated() ) {
 function tdt_one_site_is_full_width() {
     $is_full_width = false;
 
-    $is_full_width = (bool) get_theme_mod( 'tdt_one_is_full_width', false );
+    $is_full_width = (bool) get_theme_mod( 'tdt_one_is_full_width', true );
 
     return $is_full_width;
 }
