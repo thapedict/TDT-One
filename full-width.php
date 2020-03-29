@@ -1,6 +1,7 @@
 <?php
 /**
-Template Name: Full Width Page
+Template Name: No Sidebar
+Template Post Type: post, page, product
 */
 ?>
 
@@ -12,8 +13,12 @@ the_post();
 
 <section id="main">
 <div class="container">
-<?php        
-get_template_part('parts/content', 'page');
+<?php
+    if( is_page() ) {
+        get_template_part( 'parts/content', 'page' );
+    } else {
+        get_template_part( 'parts/content' );
+    }
 ?>
 </div>
 </section>
