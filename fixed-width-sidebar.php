@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Fixed Width Sidebar
+Template Name: With Sidebar
 Template Post Type: post, page, product
 */
 
