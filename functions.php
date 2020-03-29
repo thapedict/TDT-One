@@ -941,6 +941,55 @@ function tdt_one_remove_full_width() {
         }
 
         return $classes;
-    }, 10 );
+    });
 }
 
+/**
+ * Change template name when site is in full width.
+ * 
+ * @since 1.3.0
+ * 
+ * @param string $template The default template to load.
+ * 
+ * @return string The new template filename to load.
+ */
+function tdt_one_templates_with_sidebar( $template ) {
+    // Check to see if we are in full width
+    if( ! tdt_one_site_is_full_width() ) {
+        return $template;
+    }
+    
+    $_template = basename( $template );
+
+    $no_sidebar_templates = array(
+        '404.php',
+        'front-page.php',
+        'full-width.php',
+        'full-width-post.php'
+    );
+    
+    if( ! in_array( $_template, $no_sidebar_templates ) ) {
+        tdt_one_remove_full_width();
+        tdt_one_add_sidebar_full_width();
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'tdt_one_templates_with_sidebar' );
+
+/**
+ * Adds class for pages with sidebar
+ * 
+ * @param array $classes List of already added classes.
+ * 
+ * @return array List of classes after addition
+ */
+function tdt_one_add_sidebar_full_width() {
+    add_filter( 'body_class', function($classes){
+        if( ! in_array( 'sidebar-full-width', $classes ) ) {
+            $classes[] = 'sidebar-full-width';
+        }
+
+        return $classes;
+    });
+}
