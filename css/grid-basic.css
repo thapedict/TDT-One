@@ -1713,13 +1713,6 @@ nav {
     top: 0;
 }
 
-.nav-menu li:hover > .sub-menu,
-.nav-menu li > a:focus ~ .sub-menu,
-.nav-menu li:hover > .children,
-.nav-menu li > a:focus ~ .children {
-    display: block;
-}
-
 .faded {
     color: #BDBDBD;
 }
