@@ -489,7 +489,7 @@ endif;
 if(! function_exists('tdt_one_copyright') ) :
     function tdt_one_copyright( $print = true )
     {
-        $default_copyright = '2018 &copy; All Rights Reserved';
+        $default_copyright = __( '2020 &copy; All Rights Reserved', 'tdt-one' );
 
         $copyright = get_theme_mod( 'tdt_one_copyright_text', $default_copyright );
 
