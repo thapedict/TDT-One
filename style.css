@@ -48,6 +48,10 @@ body > header {
     padding-top: 3em;
 }
 
+body > header a {
+    text-decoration: none;
+}
+
 #site-header {
     margin-bottom: 2em;
 }
