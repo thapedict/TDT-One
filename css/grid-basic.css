@@ -1020,7 +1020,7 @@
 
 /*!
  *    basic.css
- *    @version    1.0.3
+ *    @version    1.0.4
  *    @author        Moeti T
  *    @license    MIT
  */
@@ -1050,11 +1050,6 @@ body {
 
 body {
     background-color: white;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 a:focus {
