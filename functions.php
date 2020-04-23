@@ -510,7 +510,8 @@ endif;
 if(! function_exists('tdt_one_credits') ) :
     function tdt_one_credits( $print = true )
     {
-        $default_credits = '<a href="https://thapedict.co.za">Theme Designed By Thapedict</a>';
+        /* translator: %s: Theme designer link */
+        $default_credits = sprintf( __( 'TDT-One Theme By %s', 'tdt-one' ), '<a href="https://thapedict.co.za">Thapedict</a>' );
 
         if($print ) {
             print $default_credits;
