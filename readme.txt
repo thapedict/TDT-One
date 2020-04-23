@@ -1,8 +1,8 @@
 === TDT One ===
 Contributors: Thapelo Moeti
 Requires at least: 5.3
-Tested up to: 5.3.2
-Stable tag: 1.3.0
+Tested up to: 5.4
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ Font Awesome Free 5.2.0 by @fontawesome - https://fontawesome.com
 License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
 == Changelog ==
+
+= 1.3.1 =
+Bug fixes
 
 = 1.3.0 =
 Added post author dialog
