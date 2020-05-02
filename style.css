@@ -143,8 +143,8 @@ figcaption {
 
 .doing-the-loop article {
     border-top: 1px solid #999;
-    padding-top: 1em;
-    margin-top: 1em;
+    padding: 1em 0;
+    margin-bottom: 1em;
 }
 
 .doing-the-loop .post-excerpt:first-child {
