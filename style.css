@@ -395,10 +395,6 @@ div#comments > .header {
     background-color: #ccc;
 }
 
-.post-content > .hw-widget {
-    padding: 2em 0;
-}
-
 body > footer {
     border-top: 3px solid;
     margin-top: 2em;
