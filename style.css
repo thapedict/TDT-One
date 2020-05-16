@@ -529,12 +529,13 @@ blockquote > p {
     color: #fff;
 }
 
-.post-content .wp-block-pullquote blockquote {
+.wp-block-pullquote blockquote {
     background-color: transparent;
     border: none;
     margin: auto;
     text-align: center;
     padding: 0.5em;
+    max-width: 100%;
 }
 
 .wp-block-pullquote {
