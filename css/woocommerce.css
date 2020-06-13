@@ -2,6 +2,10 @@
 * WooCommerce Overrides
 */
 
+.woocommerce-form-login {
+    max-width: 30em;
+}
+
 .woocommerce-mini-cart__empty-message {
     margin: 0;
 }
@@ -129,6 +133,18 @@
     .woocommerce ul.products[class*=columns-] li.product,
     .woocommerce-page ul.products[class*=columns-] li.product {
         width: 98%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .woocommerce-account .post-content > .woocommerce {
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+    }
+    
+    .woocommerce-account .post-content .woocommerce-form-login {
+        width: 30em;
     }
 }
 
