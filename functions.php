@@ -558,43 +558,30 @@ endif;
 if(! function_exists('tdt_one_preview_gallery') ) :
     function tdt_one_preview_gallery()
     {
-        $post = get_post();
-        
-        if(! $post ) {
-            return;
-        }
-        
-        $attachment_ids = get_posts(
-            array(
-            'post_parent'    => $post->post_parent,
-            'fields'         => 'ids',
-            'numberposts'    => 5,
-            'post_status'    => 'inherit',
-            'post_type'      => 'attachment',
-            'post_mime_type' => 'image',
-            'order'          => 'ASC',
-            'orderby'        => 'menu_order ID',
-            ) 
-        );
-        
-        if(! $attachment_ids ) {
-            return;
-        }
-        
-        $thumbnail_urls = array();
-        
-        for( $x = 0; $x < 5; $x++ ) {
-            if(! isset($attachment_ids[ $x ]) ) {
+        $galleries = get_post_galleries( 0, false );
+
+        $no_of_thumbs = (int) apply_filters( 'tdt_one_gallery_thumb_count', 4 );
+
+        $gallery = current( $galleries );
+        $thumbnail_urls = $gallery[ 'src' ];
+
+        // if we don't have all required thumbs, try and get them from other galleries
+        while( $no_of_thumbs > count( $thumbnail_urls ) ) {
+            $gallery = next( $galleries );
+
+            if( false === $gallery ) { // no more galleries?
                 break;
             }
-            
-            $thumbnail_urls[] = wp_get_attachment_thumb_url($attachment_ids[ $x ]);
+
+            $thumbnail_urls = array_merge( $thumbnail_urls, $gallery[ 'src' ] );
         }
+
+        $thumbnail_urls = array_slice( $thumbnail_urls, 0, $no_of_thumbs );
         
         print '<div class="gallery-preview">';
         
         foreach( $thumbnail_urls as $thumbnail ) {
-            echo '<img rel="thumbnail" alt="thumbnail" src="', esc_url($thumbnail), '" />';
+            echo '<img rel="thumbnail" alt="thumbnail" src="', esc_url( $thumbnail ), '" />';
         }
             
         print '</div>';
