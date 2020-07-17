@@ -1,6 +1,6 @@
 <?php
 
-define( 'TDT_ONE_VERSION', '1.3.1', true );
+define( 'TDT_ONE_VERSION', '1.3.1' );
 
 require_once 'inc/theme-customizer.php';
 
